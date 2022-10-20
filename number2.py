@@ -21,8 +21,10 @@
 # sum = 0
 # sum_list = []
 # for i in range(1, n+1):
+#     sum = sum + round((1 + 1 / i)**i, 2)
 #     sum_list.append(f'{i} : ' + str(round((1 + 1 / i)**i, 2)) )
 # print(sum_list)
+# print('Сумма : ' + str(sum))
 
 
     
