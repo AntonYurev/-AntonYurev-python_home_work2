@@ -26,7 +26,17 @@
 # print(sum_list)
 # print('Сумма : ' + str(sum))
 
-
-    
-
+# Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
+# Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+n = int(input('Введите число : '))
+mult = 1
+import random
+a = [-n]
+for i in range (1, n-1):
+    a.append(random.randint(-n,n))
+a.append(n)
+print('Наш список: ', a)
+for i in open('file.txt'):
+    mult = mult * a[int(i)]
+print('Произведение элементов= ', mult)
 
