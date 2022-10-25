@@ -28,15 +28,30 @@
 
 # Задайте список из N элементов, заполненных числами из промежутка [-N, N]. 
 # Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
-n = int(input('Введите число : '))
-mult = 1
-import random
-a = [-n]
-for i in range (1, n-1):
-    a.append(random.randint(-n,n))
-a.append(n)
-print('Наш список: ', a)
-for i in open('file.txt'):
-    mult = mult * a[int(i)]
-print('Произведение элементов= ', mult)
+# n = int(input('Введите число : '))
+# mult = 1
+# import random
+# a = [-n]
+# for i in range (1, n-1):
+#     a.append(random.randint(-n,n))
+# a.append(n)
+# print('Наш список: ', a)
+# for i in open('file.txt'):
+#     mult = mult * a[int(i)]
+# print('Произведение элементов= ', mult)
 
+# Реализуйте алгоритм перемешивания списка.
+n = int(input('Введите число : '))
+reserve = 0
+a = []
+import random
+for i in range (0,n):
+    a.append(random.randint(-n,n))
+print('Наш список: ', a)
+for i in range (0,n*2):
+    k=random.randint(0,n-1)
+    l=random.randint(0,n-1)
+    reserve=a[k]
+    a[k]=a[-l]
+    a[-l]=reserve
+print('Перемешанный список: ', a)
