@@ -41,17 +41,36 @@
 # print('Произведение элементов= ', mult)
 
 # Реализуйте алгоритм перемешивания списка.
-n = int(input('Введите число : '))
-reserve = 0
-a = []
-import random
-for i in range (0,n):
-    a.append(random.randint(-n,n))
-print('Наш список: ', a)
-for i in range (0,n*2):
-    k=random.randint(0,n-1)
-    l=random.randint(0,n-1)
-    reserve=a[k]
-    a[k]=a[-l]
-    a[-l]=reserve
-print('Перемешанный список: ', a)
+# n = int(input('Введите число : '))
+# reserve = 0
+# a = []
+# import random
+# for i in range (0,n):
+#     a.append(random.randint(-n,n))
+# print('Наш список: ', a)
+# for i in range (0,n*2):
+#     k=random.randint(0,n-1)
+#     l=random.randint(0,n-1)
+#     reserve=a[k]
+#     a[k]=a[-l]
+#     a[-l]=reserve
+# print('Перемешанный список: ', a)
+
+# ДОП. задача на алгоритмы с реальных собеседований
+# Даны два массива:
+# [1, 2, 3, 2, 0] и [5, 1, 2, 7, 3, 2]
+# Надо вернуть их пересечение
+# [1, 2, 2, 3]
+# (порядок не важен)
+# a = [1, 2, 3, 2, 0]
+# b = [5, 1, 2, 7, 3, 2]
+# c = []
+# for i in range (len(a)):
+#     for j in range (len(b)):
+#         if a[i] == b[j]:
+#             c.append(a[i])
+#             a[i]='t'
+#             b[j]='n'
+# print(c)
+
+
